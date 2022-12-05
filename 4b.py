@@ -90,13 +90,13 @@ def main():
         input_file = open('4test.txt')
     else:
         input_file = open('4input.txt')
-    num_completely_contained = 0
+    num_overlap_at_all = 0
     for line in input_file:
         first_assignment_set, second_assignment_set = \
             parse_line(line)
         if overlap_at_all(first_assignment_set, second_assignment_set):
-            num_completely_contained += 1
-    print(num_completely_contained)
+            num_overlap_at_all += 1
+    print(num_overlap_at_all)
 
 
 if __name__ == '__main__':
